@@ -1,5 +1,55 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7098472329382283265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5199482667230845883}
+  - component: {fileID: 7155108345189869374}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5199482667230845883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7098472329382283265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 45.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8607716544885483985}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7155108345189869374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7098472329382283265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94b3b5eeba6cf349be77395a8b86469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timedTrigger: 1
+  trigger: Fire1
+  triggerTime: 0.25
+  cooldownTime: 0
+  autoAim: 0
+  targetTag: 
+  bullet: {fileID: 4135201216688199254, guid: d8ad525bdd3fefb499aa95beddd45867, type: 3}
 --- !u!1 &8607716544885483987
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,7 +82,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -154.8643, y: -76.56121, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 5199482667230845883}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,7 +186,7 @@ MonoBehaviour:
   - Player
   - FriendlyFire
   effect: {fileID: 6690621564187417788, guid: 3a7da06147947fe4ebe48e9c564c0cd4, type: 3}
-  accountForInvulnerability: 0
+  accountForInvulnerability: 1
 --- !u!70 &1877053762974819864
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
